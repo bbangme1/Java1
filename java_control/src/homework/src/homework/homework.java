@@ -17,7 +17,7 @@ public class homework {
 		int time = kbd.nextInt();
 		int money = 0;
 
-		if (time > 0) { //
+		if (time > 0) { 
 			if (time >= 240) {
 				money = 2500 + ((time - 240) / 10) * 100; // 기본요금 2500원 시간당 100원씩 추가 (4시간 이상)
 			} else if (time >= 30) {
@@ -32,3 +32,4 @@ public class homework {
 	}
 
 }
+
