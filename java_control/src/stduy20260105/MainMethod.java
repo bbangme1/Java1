@@ -88,14 +88,15 @@ public class MainMethod {
 //			System.out.println("졌음");
 
 //		강사 코드
+//		세미콜론 (;)이 1줄에 1개일시 중괄호({) 생략가능
 		int res = user - com;
-		if (res == 0) {
+		if (res == 0) 
 			System.out.println(" 비김 ");
-		} else if (res == -2 || res == 1) {
+		 else if (res == -2 || res == 1) 
 			System.out.println(" 승리 ");
-		} else {
+		 else 
 			System.out.println(" 패배 ");
-		}
+		
 	}
 
 }
