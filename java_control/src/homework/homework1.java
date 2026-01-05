@@ -32,9 +32,9 @@ public class homework1 {
 				System.out.println("패배");
 				count2++;
 			}
-			System.out.println("비긴 횟수 : " + count + " 번");
 			System.out.println("승리 횟수 : " + count1 + " 번");
 			System.out.println("패배 횟수 : " + count2 + " 번");
+			System.out.println("비긴 횟수 : " + count + " 번");
 		}
 		
 
