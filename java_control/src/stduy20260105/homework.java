@@ -1,4 +1,4 @@
-package stduy20260102;
+package stduy20260105;
 
 import java.util.Scanner;
 
