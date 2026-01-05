@@ -44,7 +44,7 @@ public class homework {
 		System.out.print(" 총 몇분 주차 : ");
 		int pTime = kbd.nextInt(); // 키보드 입력 값 받아서 정수로 변환하여 변수에 저장
 
-		pTime /= 10;
+		pTime /= 10; // pTime = pTime/10 - 3
 		if (pTime >= 24) { // 4시간 이상 주차시 pTim >= 240
 			cost = 2500; // 4시간 이상 기본요금 변경
 			pTime -= 24; // 4시간 빼기 , 4시간에 대한 요금 2500원 나머지는 10분당요금
