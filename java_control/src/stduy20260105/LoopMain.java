@@ -66,12 +66,39 @@ public class LoopMain {
 //		}
 //		System.out.println("맞춘 횟수 : " + count + "번");
 //		System.out.println("틀린 횟수 : " + count1 + "번");
-		
+
 //		무한 루프 - 반복문은 조건식이 참인경우에 계속 반복 수행을 한다.
 //					무조건 참이 되게 조건식을 설정하면 무한 반복을 할수 있다.
 //		무한 루프는 지정된 회수가 업식에 멈추지 않고 계속 동작한다.
 //		그래서 무한루프 구현시 특정 조건을 걸어 둔다.
-		
+
+//		 무조건 참이나오게 하는 무한루프 코드
+//		for (; true;) { 
+//
+//		}
+
+//		for (;;) { 
+//			;
+//		}
+
+//		while(true) {
+//			System.out.println("나는 무한 루프이다.");
+//		}
+
+//		int i = 10;
+//		while (true) {
+//			System.out.println(i);
+//			i++;
+//			if (i == 40)
+//				break;
+//		}
+
+		while (true) {
+			int num = (int) Math.floor(Math.random() * 20) + 1;
+			System.out.println(num);
+			if (num == 11)
+				break;
+		}
 
 	}
 
@@ -81,9 +108,6 @@ public class LoopMain {
 //	가위 바위 보 게임을 총 15판 진행
 //	게임을 진행 하면서 1판 끝날때 마다
 //	몇승, 몇패, 몇무 출력하기
-
-	
-
 
 // 반복문 - for, while, do~while 반복문이란 특정 코드를 정해진 횟수만큼 동작 시키는 과정 이다. 
 // 또는 횟수의 제한 없이 동작 시 킬수 있다.
@@ -100,4 +124,3 @@ public class LoopMain {
 // for (Member m : MemberList){
 // 
 // }
-
