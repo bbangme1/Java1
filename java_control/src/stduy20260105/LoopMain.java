@@ -93,11 +93,27 @@ public class LoopMain {
 //				break;
 //		}
 
+//		while (true) {
+//			int num = (int) Math.floor(Math.random() * 20) + 1;
+//			System.out.println(num);
+//			if (num == 11)
+//				break;
+//		}
+
+		int com = (int) Math.floor(Math.random() * 50) + 1;
+
 		while (true) {
-			int num = (int) Math.floor(Math.random() * 20) + 1;
-			System.out.println(num);
-			if (num == 11)
+			System.out.println("1~50 중 입력 : ");
+			int user = scan.nextInt();
+			if (user > com) 
+				System.out.println("DOWN");			
+			else if (user < com) 
+				System.out.println("UP");			
+			else {
+				System.out.println(" 정답 !");
 				break;
+			}
+
 		}
 
 	}

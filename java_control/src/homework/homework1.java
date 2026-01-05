@@ -10,31 +10,51 @@ public class homework1 {
 //		게임을 진행 하면서 1판 끝날때 마다
 //		몇승, 몇패, 몇무 출력하기
 
-		int count = 0;
-		int count1 = 0;
-		int count2 = 0;
-
+//		int count = 0;
+//		int count1 = 0;
+//		int count2 = 0;
+//
 		Scanner scan = new Scanner(System.in);
-
-		for (int i = 1; i <= 15; i++) {
-			System.out.print("가위1 바위2 보3 입력 : ");
-			int user = scan.nextInt();
-			int com = (int) Math.floor(Math.random() * 3) + 1;
-			int res = user - com;
-
-			if (res == 0) {
-				System.out.println("비김 ");
-				count++;
-			} else if (res == -2 || res == 1) {
-				System.out.println("승리");
-				count1++;
-			} else {
-				System.out.println("패배");
-				count2++;
+//
+//		for (int i = 1; i <= 15; i++) {
+//			System.out.print("가위1 바위2 보3 입력 : ");
+//			int user = scan.nextInt();
+//			int com = (int) Math.floor(Math.random() * 3) + 1;
+//			int res = user - com;
+//
+//			if (res == 0) {
+//				System.out.println("비김 ");
+//				count++;
+//			} else if (res == -2 || res == 1) {
+//				System.out.println("승리");
+//				count1++;
+//			} else {
+//				System.out.println("패배");
+//				count2++;
+//			}
+//			System.out.println("비긴 횟수 : " + count + " 번");
+//			System.out.println("승리 횟수 : " + count1 + " 번");
+//			System.out.println("패배 횟수 : " + count2 + " 번");
+//		}
+		
+//		숫자 맞추기 입장 바꿔서
+		
+		int UP = 1;
+		int DOWN = 2;
+		int Correct = 3;
+		
+		System.out.println("숫자를 입력하세요 : ");
+		int user = scan.nextInt();
+		
+		while(true) {
+			int com =(int)Math.floor(Math.random()*50)+1;
+			System.out.println(com);
+			System.out.println("UP 1 , DOWN 2 , CORRECT 3 입력 : ");			
+			int user1 = scan.nextInt();
+			if(com > user) {
+				System.out.println("UP 1 , DOWN 2 , CORRECT 3 입력 : ");			
+				
 			}
-			System.out.println("비긴 횟수 : " + count + " 번");
-			System.out.println("승리 횟수 : " + count1 + " 번");
-			System.out.println("패배 횟수 : " + count2 + " 번");
 		}
 
 	}
