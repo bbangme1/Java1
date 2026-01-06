@@ -10,10 +10,37 @@ public class homework1 {
 //		게임을 진행 하면서 1판 끝날때 마다
 //		몇승, 몇패, 몇무 출력하기
 
-		int count = 0;
-		int count1 = 0;
-		int count2 = 0;
+//		내가 만든 코드
+//		int count = 0;
+//		int count1 = 0;
+//		int count2 = 0;
+//
+//		Scanner scan = new Scanner(System.in);
+//
+//		for (int i = 1; i <= 15; i++) {
+//			System.out.print("가위1 바위2 보3 입력 : ");
+//			int user = scan.nextInt();
+//			int com = (int) Math.floor(Math.random() * 3) + 1;
+//			int res = user - com;
+//
+//			if (res == 0) {
+//				System.out.println("=== 비김 ===");
+//				count++;
+//			} else if (res == -2 || res == 1) {
+//				System.out.println("=== 승리 ===");
+//				count1++;
+//			} else {
+//				System.out.println("=== 패배 ===");
+//				count2++;
+//			}
+//			System.out.println("승리 횟수 : " + count1 + " 번");
+//			System.out.println("패배 횟수 : " + count2 + " 번");
+//			System.out.println("비긴 횟수 : " + count + " 번");
+//		}
 
+//		강사 코드
+		int winCount = 0, loseCount = 0, drawCount = 0;
+		
 		Scanner scan = new Scanner(System.in);
 
 		for (int i = 1; i <= 15; i++) {
@@ -23,21 +50,18 @@ public class homework1 {
 			int res = user - com;
 
 			if (res == 0) {
-				System.out.println("비김 ");
-				count++;
+				System.out.println("=== 비김 ===");
+				drawCount++;
 			} else if (res == -2 || res == 1) {
-				System.out.println("승리");
-				count1++;
+				System.out.println("=== 승리 ===");
+				winCount++;
 			} else {
-				System.out.println("패배");
-				count2++;
+				System.out.println("=== 패배 ===");
+				loseCount++;
 			}
-			System.out.println("승리 횟수 : " + count1 + " 번");
-			System.out.println("패배 횟수 : " + count2 + " 번");
-			System.out.println("비긴 횟수 : " + count + " 번");
+			System.out.println("승 : " + winCount + " 패 : "+loseCount+" 무 : "+drawCount);
+			
 		}
-		
-
 
 	}
 
