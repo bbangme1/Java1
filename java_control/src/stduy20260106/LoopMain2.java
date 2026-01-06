@@ -70,7 +70,7 @@ public class LoopMain2 {
 			if (user2 == com1 || user2 == com3)
 				ball++;
 			if (user3 == com1 || user3 == com2)
-				ball++;
+				ball++;			
 
 			System.out.println(str + "스트라이크, " + ball + "볼 " + (3 - str - ball) + "아웃");
 			if (str == 3) {
