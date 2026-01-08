@@ -2,7 +2,7 @@ package homework;
 
 import java.util.Scanner;
 
-public class homework {
+public class Homework {
 
 public static void main(String[] args) {
 //			주차장에 요금이 기본요금은 1000원이다.

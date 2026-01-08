@@ -2,7 +2,7 @@ package homework;
 
 import java.util.Scanner;
 
-public class homework1 {
+public class Homework1 {
 
 	public static void main(String[] args) {
 //	    1월 5일 과제
