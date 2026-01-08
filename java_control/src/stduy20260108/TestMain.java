@@ -14,7 +14,6 @@ public class TestMain {
 		for (int i = 0; i < random.length; i++) {
 			random[i] = (int) Math.floor(Math.random() * 50) + 1;
 			System.out.print(random[i] + " ");
-
 		}
 
 	}
