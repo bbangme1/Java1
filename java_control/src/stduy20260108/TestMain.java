@@ -92,10 +92,10 @@ public class TestMain {
 			}
 		}
 		
-		int maxDay = Arrays.asList(temp).indexOf(max);
-		int minDay = Arrays.asList(temp).indexOf(min);
-		System.out.println("가장 낮은 기온 : " + min + " 날짜 : 12월 " + (maxDay+15) + "일");
-		System.out.println("가장 낮은 기온 : " + min + " 날짜 : 12월 " + minDay + "일");
+//		int maxDay = Arrays.asList(temp).indexOf(max);
+//		int minDay = Arrays.asList(temp).indexOf(min);
+//		System.out.println("가장 높은 기온 : " + max + " 날짜 : 12월 " + (maxDay+11) + "일"); 기준값인 temp가 잘못대서 정상출력 불가
+//		System.out.println("가장 낮은 기온 : " + min + " 날짜 : 12월 " + (minDay+11) + "일"); 기준값인 temp가 잘못대서 정상출력 불가
 		
 
 	}
