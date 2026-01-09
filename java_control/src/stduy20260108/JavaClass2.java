@@ -1,8 +1,12 @@
 package stduy20260108;
 
+import stduy20260109.Member;
+
 public class JavaClass2 {
 
 	public static void main(String[] args) {
+		
+		Member member = new Member();
 
 		Movie movie = new Movie(); // ()가 붙은건 메서드
 //		new Movie() 생성자 메서드(만들어진 공간을 초기화)

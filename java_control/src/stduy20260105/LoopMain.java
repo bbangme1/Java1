@@ -10,10 +10,10 @@ public class LoopMain {
 //			System.out.println(i);
 //		}
 
-//		for (int i = 1; i <= 100; i++) {
-//			if (i % 10 == 0) 
-//				System.out.println(i);
-//		}
+		for (int i = 1; i <= 100; i++) {
+			if (i % 10 == 0) 
+				System.out.println(i);
+		}
 
 		Scanner scan = new Scanner(System.in);
 //
