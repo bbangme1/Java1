@@ -55,5 +55,43 @@ public class Testquiz1 {
 		}
 		if (gyeolseog > 3 || totle1 <= 8)
 			System.out.println("위험");
+
+//		문제 3번
+		int[] counseling = { 12, 8, 15, 15, 3, 9, 20 }; // 상담수
+		int[] contract = { 2, 1, 3, 0, 0, 1, 4 }; // 계약수
+		int[] claims = { 0, 1, 0, 2, 1, 0, 3 }; // 클레임수
+		String[] week = { "월","화","수","목","금","토","일" }; // 요일
+
+		int counselingtotal = 0; // 상담수 총합
+		int contracttotal = 0; // 계약수 총합
+		int claimstotal = 0; // 클레임수 총합
+
+		int maxconversionrate = 0; // 최고 전환율
+		int maxcounseling = counseling[0]; // 최고 상담수
+		int maxcontract = contract[0]; // 최고 계약수
+		int day = 0;
+
+		for (int i = 0; i < counseling.length; i++) {
+			counselingtotal += counseling[i];
+			contracttotal += contract[i];
+			claimstotal += claims[i];
+			
+			if(maxcounseling < counseling[i]) {
+				maxcounseling = counseling[i];				
+			}
+			if(maxcontract < contract[i]) {
+				maxcontract = contract[i];
+			}
+			maxconversionrate = (contract[i] * 100) / counseling[i];			
+			day = i;
+		}
+
+		System.out.println("주간 상담 총합 : " + counselingtotal);
+		System.out.println("주간 계약 총합 : " + contracttotal);
+		System.out.println("주간 클레임 총합 : " + claimstotal);
+		System.out.println("최고 전환율 : " + week[day] + "(" + maxconversionrate + "%)");
+
 	}
-}
+	}
+
+
