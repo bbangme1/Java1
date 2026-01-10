@@ -61,6 +61,7 @@ public class Testquiz1 {
 		int[] contract = { 2, 1, 3, 0, 0, 1, 4 }; // 계약수
 		int[] claims = { 0, 1, 0, 2, 1, 0, 3 }; // 클레임수
 		String[] week = { "월", "화", "수", "목", "금", "토", "일" }; // 요일
+		int[] dayScore = new int[counseling.length];
 
 		int counselingtotal = 0; // 상담수 총합
 		int contracttotal = 0; // 계약수 총합
@@ -70,26 +71,60 @@ public class Testquiz1 {
 		int maxcounseling = 0; // 최고 상담수
 		int maxcontract = 0; // 최고 계약수
 		int day = 0;
+		int danger = 0; // 위험 요일
+		int first = 0;
+		int second = -1;
 
 		for (int i = 0; i < counseling.length; i++) {
-			counselingtotal += counseling[i];
+			counselingtotal += counseling[i]; // 총합 계산
 			contracttotal += contract[i];
 			claimstotal += claims[i];
 
-			if (maxcounseling < counseling[i]) {
+			if (maxcounseling < counseling[i]) { // 최고 전환율
 				maxcounseling = counseling[i];
 			}
 			if (maxcontract < contract[i]) {
 				maxcontract = contract[i];
 			}
-			maxconversionrate = (contract[i] * 100) / counseling[i];
-			day = i;
+			int conversionrate = (contract[i] * 100) / counseling[i];
+
+			if (conversionrate > maxconversionrate) {
+				maxconversionrate = conversionrate;
+				day = i;
+			}
+		}
+		for (int i = 0; i < counseling.length; i++) { // 베스트 2일
+			dayScore[i] = (contract[i] * 5) + (counseling[i] * 1) - (claims[i] * 4);
+		}
+
+		for (int i = 1; i < dayScore.length; i++) {
+			if (dayScore[i] > dayScore[first]) {
+				second = first;
+				first = i;
+			} else if (dayScore[i] < dayScore[first]) {
+				if (second == -1 || dayScore[i] > dayScore[second]) {
+					second = i;
+				}
+			}
+
 		}
 
 		System.out.println("주간 상담 총합 : " + counselingtotal);
 		System.out.println("주간 계약 총합 : " + contracttotal);
 		System.out.println("주간 클레임 총합 : " + claimstotal);
+		System.out.println();
 		System.out.println("최고 전환율 : " + week[day] + "(" + maxconversionrate + "%)");
-
+		System.out.println();
+		System.out.println("위험 요일 : ");
+		for (int i = 0; i < contract.length; i++) {
+			if (claims[i] >= 2 || counseling[i] >= 10 && contract[i] == 0) {
+				System.out.println("- " + week[i] + "요일");
+				danger++;
+			}
+		}
+		if (danger == 0)
+			System.out.println("위험 요일 없음");
+		System.out.println("1등 : " + week[first] + "요일" + " 점수 : " + dayScore[first]);
+		System.out.println("2등 : " + week[second] + "요일" + " 점수 : " + dayScore[second]);
 	}
 }
