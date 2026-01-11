@@ -6,7 +6,7 @@ public class Testex {
 		Student s = new Student();
 		s.name = "홍길동";
 		s.age = 20;
-		s.studentId = "20260111";
+		s.studentId = "2026";
 
 		s.introduce();
 		s.study();		
