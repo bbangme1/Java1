@@ -10,5 +10,6 @@ public class Testex {
 
 		s.introduce();
 		s.study();		
+		
 	}
 }
