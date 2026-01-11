@@ -13,7 +13,7 @@ public class Testquiz1 {
 		int maxdal = 0; // 최대 매출 월
 		int mindal = 0; // 최저 매출 월
 		int avgdal = 0; // 평균 매출 이상 월
-		int max = monthlySales[0];
+		int max = monthlySales[0]; 
 		int min = monthlySales[0];
 
 		for (int i = 0; i < monthlySales.length; i++) {
