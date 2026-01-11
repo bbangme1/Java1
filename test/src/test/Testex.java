@@ -9,8 +9,6 @@ public class Testex {
 		s.studentId = "2024001";
 
 		s.introduce();
-		s.study();
-		
-		
+		s.study();		
 	}
 }
