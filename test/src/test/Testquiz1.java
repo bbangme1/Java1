@@ -8,7 +8,11 @@ public class Testquiz1 {
 //		문제 1번
 		int[] monthlySales = { 1200, 950, 1430, 800, 1600, 1700, 900, 1100, 1550, 1800, 1300, 2000 };
 
-		int totle = 0, avg = 0, maxdal = 0, mindal = 0, avgdal = 0;
+		int totle = 0; // 총 점수
+		int avg = 0; // 평균 점수
+		int maxdal = 0; // 최대 매출 월
+		int mindal = 0; // 최저 매출 월
+		int avgdal = 0; // 평균 매출 이상 월
 		int max = monthlySales[0];
 		int min = monthlySales[0];
 
@@ -61,7 +65,7 @@ public class Testquiz1 {
 		int[] contract = { 2, 1, 3, 0, 0, 1, 4 }; // 계약수
 		int[] claims = { 0, 1, 0, 2, 1, 0, 3 }; // 클레임수
 		String[] week = { "월", "화", "수", "목", "금", "토", "일" }; // 요일
-		int[] dayScore = new int[counseling.length];
+		int[] dayScore = new int[counseling.length]; // 일 점수
 
 		int counselingtotal = 0; // 상담수 총합
 		int contracttotal = 0; // 계약수 총합
@@ -70,10 +74,10 @@ public class Testquiz1 {
 		int maxconversionrate = 0; // 최고 전환율
 		int maxcounseling = 0; // 최고 상담수
 		int maxcontract = 0; // 최고 계약수
-		int day = 0;
+		int day = 0; // 요일
 		int danger = 0; // 위험 요일
-		int first = 0;
-		int second = -1;
+		int first = 0; // 1등 요일
+		int second = -1; // 2등 요일
 
 		for (int i = 0; i < counseling.length; i++) {
 			counselingtotal += counseling[i]; // 총합 계산
