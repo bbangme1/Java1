@@ -21,6 +21,8 @@ class Student extends Member {
 	@Override
 	public void introduce() {
 		System.out.println("학생 이름: " + name + ", 나이: " + age + " 학번 : " + studentId);
+		
+		
 	}
 }
 
