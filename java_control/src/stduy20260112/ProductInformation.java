@@ -10,8 +10,8 @@ public class ProductInformation {
 
 	@Override
 	public String toString() {
-		return "ProductInformation [productName=" + productName + ", commodityPrice=" + commodityPrice + ", category="
-				+ category + ", quantity=" + quantity + "]";
+		return "ProductInformation [상품명 : " + productName + ", 싱픔 기갹 : " + commodityPrice + ", 카테고리 :"
+				+ category + ", 수량 : " + quantity + "]";
 	}
 
 	public ProductInformation(String productName, int commodityPrice, String category, int quantity) {

@@ -10,7 +10,7 @@ public class UserInformation {
 
 	@Override
 	public String toString() {
-		return "UserInformation [name=" + name + ", id=" + id + ", password=" + password + ", PhoneNumber="
+		return "UserInformation [이름 : " + name + ", 아이디 : " + id + ", 비밀번호 : " + password + ", 전화번호 : "
 				+ PhoneNumber + "]";
 	}
 
