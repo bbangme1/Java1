@@ -3,7 +3,7 @@ package stduy20260112;
 public class Mathod2 {
 
 	public static void main(String[] args) {
-		
+
 		Vending orange = new Vending("쌕쌕 오렌지", 1500, 2);
 		Vending top = new Vending("Top 블랙", 2700, 3);
 		
@@ -26,6 +26,24 @@ public class Mathod2 {
 		orange.stockCount1(5);
 		System.out.println(orange);
 		top.stockCount1(5);
+		System.out.println(top);
+		System.out.println();
+		
+		orange.calculateChange(5000);
+		System.out.println(orange);
+		top.calculateChange(5000);
+		System.out.println(top);
+		System.out.println();
+		
+		orange.changePrice(5000);
+		System.out.println(orange);
+		top.changePrice(5000);
+		System.out.println(top);
+		System.out.println();
+		
+		orange.buyMultiple(2, 10000);
+		System.out.println(orange);
+		top.buyMultiple(2, 10000);
 		System.out.println(top);
 	}
 
