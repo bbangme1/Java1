@@ -41,9 +41,9 @@ public class Mathod2 {
 		System.out.println(top);
 		System.out.println();
 		
-		orange.buyMultiple(2, 10000);
+		orange.buyMultiple(2, 12000);
 		System.out.println(orange);
-		top.buyMultiple(2, 10000);
+		top.buyMultiple(2, 11000);
 		System.out.println(top);
 	}
 
