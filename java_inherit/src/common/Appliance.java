@@ -1,6 +1,6 @@
 package common;
 
-public class Appliance { // 가전 제품
+public abstract class Appliance { // 가전 제품
 
 	protected boolean onoff = false; // 전원 여부
 	protected String name; // 제품명
@@ -19,13 +19,7 @@ public class Appliance { // 가전 제품
 		return "Appliance [onoff=" + onoff + ", name=" + name + ", powerCon=" + powerCon + "]";
 	}
 
-	public void power() {
+	public abstract void power(); // 추상메서드
 
-		onoff = !onoff;
-
-		String res = onoff ? "켜짐" : "꺼짐";
-		System.out.println("전원 " + res);
-
-	}
-
+//	추상 메서드 가지고 있는 클래스는 반드시 추상클래스여야만 한다.
 }
