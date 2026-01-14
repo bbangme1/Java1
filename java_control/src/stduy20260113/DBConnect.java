@@ -3,7 +3,6 @@ package stduy20260113;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DBConnect {
@@ -21,9 +20,9 @@ public class DBConnect {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			String username = "bbangme1";
 			String password = "123456";
-			String ur1 = "jdbc:mysql://localhost:3306/bbangme1";
+			String url = "jdbc:mysql://localhost:3306/bbangme1";
 
-			conn = DriverManager.getConnection(ur1, username, password);
+			conn = DriverManager.getConnection(url, username, password);
 
 		} catch (Exception e) {
 			System.out.println("접속 실패");
