@@ -1,5 +1,6 @@
 package sangsog;
 
+import common.Transaction;
 import householdaccountbook.Expense;
 import householdaccountbook.Income;
 import householdaccountbook.Transfer;
@@ -7,17 +8,17 @@ import householdaccountbook.Transfer;
 public class TransactionMain {
 //			실행 메인 클래스
 	public static void main(String[] args) {
+		int balance = 0;
 
-		Income income = new Income(0, "2026.01.16", "입금", 50000);
-		Expense expenes = new Expense(0, "2026.01.16", "출금", 20000);
-		Transfer transfer = new Transfer(0, "2016.01.16", "이체");
+		Transaction[] transaction = { new Income(50000, "26.1.16", "입금"), new Expense(20000, "26.1.16", "출금"),
+				new Transfer(20000, "26.1.16", "이체") };
 
-		income.Calculation();
-		System.out.println(income);
-		expenes.Calculation();
-		System.out.println(expenes);
-		transfer.Calculation();
-		System.out.println(transfer);
+		for (Transaction tra : transaction) {
+			System.out.println(tra.toString());
+			balance = tra.Calculation(balance);
+
+			System.out.println("잔액 : " + balance + "원");
+		}
 	}
 
 }

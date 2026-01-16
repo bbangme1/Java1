@@ -5,15 +5,18 @@ import common.Transaction;
 //			자식 클래스
 public class Income extends Transaction {
 
-	private int sum;
-
-	public Income(int amount, String date, String memo, int sum) {
+	public Income(int amount, String date, String memo) {
 		super(amount, date, memo);
-		this.sum = sum;
+	}
+
+	public void getincrease() {
+		System.err.println(amount);
 	}
 
 	@Override
-	public void Calculation() {
-		
+	public int Calculation(int money) {
+		return money + amount;
+
 	}
+
 }
