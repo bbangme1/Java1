@@ -45,7 +45,7 @@ public class g {
 //			sum += score;
 //		}
 //		return (double)sum/arr.length;
-		
+
 //		System.out.println("점수를 입력하세요");
 //		int j = sc.nextInt();
 //		
@@ -53,14 +53,14 @@ public class g {
 //			System.out.println("짝수");
 //		else
 //			System.out.println("홀수");
-		
+
 //		int n = sc.nextInt();
 //		
 //		for (int i = 1; i <= 9; i++) {
 //			int t = n*i;
 //			System.out.println(n+ "*"+ (i) + "=" + t);
 //		}
-		
+
 //		int n = sc.nextInt();
 //		
 //		for (int i = 0; i <= n; i++) {
@@ -69,8 +69,58 @@ public class g {
 //			}
 //			System.out.println();
 //		}
+
+//		int min = 1;
+//		int max = 100;
+//
+//		System.out.println("숫자 입력");
+//		int user = sc.nextInt();
+//
+//		while (true) {
+//			int com = (int) Math.floor(Math.random() * (max - min + 1)) + min;
+//			System.out.println(com);
+//			System.out.println("UP 1 , DOWN 2 , CORRECT 3 입력 : ");
+//			int user1 = sc.nextInt();
+//
+//			if (user1 == 1) {
+//				System.out.println("UP");
+//				min = com + 1;
+//			} else if (user1 == 2) {
+//				System.out.println("DOWN");
+//				max = com - 1;
+//			} else {
+//				System.out.println("정답입니다");
+//				break;
+//			}
+//		}
 		
+//		int sum = 0;
+//		double avg;
+//		
+//		int[] user = new int[5];
+//		
+//		int max = user[0];
+//		
+//		for (int i = 0; i < user.length; i++) {
+//			user[i] = sc.nextInt();
+//			sum += user[i];
+//			if ( user[i] > max)
+//				max = user[i];
+//		}
+//		avg = (double)sum/user.length;
+//		System.out.println(sum);
+//		System.out.println(max);
+//		System.out.println(avg);
 		
+//		int[] a = new int[6];
+//		int c = 0;
+//		
+//		for (int i = 0; i < a.length; i++) {
+//			a[i] = sc.nextInt();
+//			if(a[i] % 2 == 0)
+//				c++;
+//				System.out.println(c);
+//		}
 	}
 
 }

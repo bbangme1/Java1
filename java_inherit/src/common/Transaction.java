@@ -13,7 +13,7 @@ public abstract class Transaction {
 		this.memo = memo;
 	}
 
-	public abstract int Calculation(int money); // 계산
+	public abstract int calculation(int money); // 계산
 
 	@Override
 	public String toString() {

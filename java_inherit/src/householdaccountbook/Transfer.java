@@ -11,7 +11,7 @@ public class Transfer extends Transaction {
 	}
 
 	@Override
-	public int Calculation(int money) {
+	public int calculation(int money) {
 		return money - amount;
 	}
 
