@@ -6,10 +6,12 @@ public class Notification {
 
 	private String[] type;
 	private String message;
+	private String name;
 
-	public Notification(String[] type, String message) {
+	public Notification(String[] type, String message, String name) {
 		this.message = message;
 		this.type = type;
+		this.name = name;
 	}
 
 //	이벤트 전송 방법
@@ -21,20 +23,17 @@ public class Notification {
 	}
 
 //	이벤트 발송
-	public void Transfer(String event) {
+	public void Transfer(String type) {
 		Notifier transfe = null;
-		switch (event) {
-		case "회원가입 완료":
-		case "비밀번호 변경":
-			transfe = new Email(event, message);
+		switch (type) {
+		case "E-Mail":
+			transfe = new Email(type, message, name);
 			break;
-		case "주문 완료":
-		case "배송 시작":
-			transfe = new Sms(event, message);
+		case "SMS":
+			transfe = new Sms(type, message, name);
 			break;
-		case "배송 취소":
-		case "환불 완료":
-			transfe = new App(event, message);
+		case "앱 알람":
+			transfe = new App(type, message, name);
 			break;
 		default:
 			System.out.println("제공되지 않는 알람입니다");
@@ -43,8 +42,8 @@ public class Notification {
 		if (transfe == null)
 			return;
 
-		transfe.send();
 		transfe.check();
+		transfe.send();
 
 	}
 

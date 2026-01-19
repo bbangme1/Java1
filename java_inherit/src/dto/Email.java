@@ -2,13 +2,20 @@ package dto;
 
 public class Email extends BaseNotifier {
 
-	public Email(String event, String message) {
-		super(event, message);
+	public Email(String type, String message, String name) {
+		super(type, message, name);
 	}
 
 	@Override
 	public void check() {
-		System.out.println("이메일 전송 : [" + event + "]");
+		System.out.println("[" + name + "]");
+
+	}
+
+	@Override
+	public void send() {
+		System.out.println("[" + message + "]");
+		System.out.println("[" + type + "] 전송");
 
 	}
 

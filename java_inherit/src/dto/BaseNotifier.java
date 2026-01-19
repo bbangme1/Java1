@@ -4,16 +4,14 @@ import able.Notifier;
 
 public abstract class BaseNotifier implements Notifier {
 
-	protected String event;
 	protected String message;
+	protected String type;
+	protected String name;
 
-	public BaseNotifier(String event, String message) {
-		this.event = event;
+	public BaseNotifier(String type, String message, String name) {
+		this.type = type;
 		this.message = message;
-	}
-
-	public void send() {
-		System.out.println("[" + message + "]");
+		this.name = name;
 	}
 
 }
