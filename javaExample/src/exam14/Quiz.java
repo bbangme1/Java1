@@ -22,6 +22,8 @@ public class Quiz {
 			int s1 = Integer.parseInt(s);
 			int m1 = Integer.parseInt(m);
 
+			Money money = new Money(name, s1, m1);
+
 			list.add(name);
 
 		}
