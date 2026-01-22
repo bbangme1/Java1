@@ -11,9 +11,9 @@ public class Money {
 		this.s = s;
 		this.m = m;
 	}
-	
+
 	public int total() {
-		return tot = s * m ;
+		return tot = s * m;
 	}
 
 	public int getS1() {
