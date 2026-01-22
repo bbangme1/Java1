@@ -1,4 +1,4 @@
-package exam14;
+package exam15;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class Quiz {
 			String m = sc.nextLine();
 
 			int s1 = Integer.parseInt(s);
-			int m1 = Integer.parseInt(m);
+			int m1 = Integer.parseInt(m);		
 
 			Money money = new Money(name, s1, m1);
 
