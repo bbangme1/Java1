@@ -1,0 +1,44 @@
+
+자바 접속명령어
+-u javaUser(유저ID) -p
+
+insert into member( 필드명 ) valus ( 값 );
+select * from 테이블명;
+
+제약조건 = > 무결성
+primary key ( 기본키 ) // 중복 X ,null X
+Foreign key ( 참조키, 외래키)
+unique // 중복 X, null O
+not null
+default
+enum
+check
+
+* 기본키 (PK) 관련
+후보키 : 기본키가 될수있는 키
+기본키 : 
+대체키 : 
+수퍼키 : 
+
+select : 조회, 검색
+insert : 삽입, 추가, 등록
+update : 수정
+delete : 삭제
+
+DDL : 데이터 정의어   - create, alter, drop, truncate
+DML : 데이터 조작어   - select, insert, update, delete
+DCL : 데이터 제어어   - grant, revoke
+TCL : 트랜잭션 제어어 - commit, rollback, sevepoint
+
+1.학생관리
+* 테이블명 : student
+
+create table student (
+hakbun int not null auto_increment primary key,
+name varchar(50) not null,
+ssn varchar(15) not null unique,
+phone varchar(15) not null,
+address varchar(250) not null,
+createdDate datetime DEFAULT CURRENT_TIMESTAMP
+);
+
