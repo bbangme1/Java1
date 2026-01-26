@@ -12,20 +12,39 @@ public class StudentDTO {
 	private String address;
 	private Date createdDate;
 
-	public StudentDTO(Scanner sc) {
-		inputField(sc);
+	Scanner sc = new Scanner(System.in);
+
+	public StudentDTO() {
+
 	}
 
-	public void inputField(Scanner sc) {
-//		Scanner sc = new Scanner(System.in);
-		System.out.println("이름 : ");
-		this.name = sc.nextLine();
-		System.out.println("주민번호 : ");
-		this.ssn = sc.nextLine();
-		System.out.println("전화번호 : ");
-		this.phone = sc.nextLine();
-		System.out.println("주소 : ");
-		this.address = sc.nextLine();
+	public void inputField(String gubun) {
+		if (gubun.equals("view") || gubun.equals("sujung") || gubun.equals("sakje")) {
+			System.out.println("학번 : ");
+			String hakbun_ = sc.nextLine();
+			this.hakbun = Integer.parseInt(hakbun_);
+		}
+		if (gubun.equals("chuga")) {
+			System.out.println("이름 : ");
+			this.name = sc.nextLine();
+			System.out.println("주민번호 : ");
+			this.ssn = sc.nextLine();
+			System.out.println("전화번호 : ");
+			this.phone = sc.nextLine();
+			System.out.println("주소 : ");
+			this.address = sc.nextLine();
+		} else if (gubun.equals("sujung")) {
+			System.out.println("전화번호 : ");
+			this.phone = sc.nextLine();
+			System.out.println("주소 : ");
+			this.address = sc.nextLine();
+		} else if (gubun.equals("sakja")) {
+			System.out.println("삭제 되었습니다.");
+		}
+	}
+
+	public void display() {
+		System.out.printf("%d \t %s \t %s \t %s \t %s \t %s\n", hakbun, name, ssn, phone, address, createdDate);
 	}
 
 	public int getHakbun() {

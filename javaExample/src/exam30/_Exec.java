@@ -1,7 +1,6 @@
 package exam30;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 import java.util.Scanner;
 
 public class _Exec {
@@ -11,38 +10,35 @@ public class _Exec {
 		while (true) {
 			System.out.println("선택(1:목록, 2:상세보기, 3:등록, 4:수정, 5:삭제, 기타:종료)");
 			String menu = sc.nextLine();
+			StudentDAO dao = new StudentDAO();
+			StudentDTO dto = new StudentDTO();
+			int result = 0;
+
 			switch (menu) {
 			case "1":
-				System.out.println("- 목록 -");
+				List<StudentDTO> list = dao.getSelectAll();
+				System.out.println("학번 \t 이름 \t 주민번호 \t 연락처 \t 주소 \t 등록일");
+				System.out.println("----------------------------------------------------");
+				for (int i = 0; i < list.size(); i++) {
+					list.get(i).display();
+				}
 				break;
 			case "2":
-				System.out.println("- 상세보기 -");
+				dto.inputField("view");
+				StudentDTO resultDTO = dao.getSelectOne(dto);
+				resultDTO.display();
 				break;
 			case "3":
-				System.out.println("- 등록 -");
-				StudentDTO dto = new StudentDTO(sc);
-				String name = "이성순";
-				String ssn = "123456-1234567";
-				String phone = "010-1111-1111";
-				String address = "서울";
-
-//				String[] strs = {name,ssn,phone,address};
-
-				Map<String, String> map = new HashMap<>();
-				map.put("name", name);
-				map.put("ssn", ssn);
-				map.put("phone", phone);
-				map.put("address", address);
-				StudentDAO dao = new StudentDAO();
-//				int result = dao.setInsert(name,ssn,phone,address);
-				int result = dao.setInsert(map);
-				System.out.println(result);
+				dto.inputField("chuga");
+				result = dao.setInsert(dto);
 				break;
 			case "4":
-				System.out.println("- 수정 -");
+				dto.inputField("sujung");
+				result = dao.setChange(dto);
 				break;
 			case "5":
-				System.out.println("- 삭제 -");
+				dto.inputField("sakje");
+				result = dao.setDelete(dto);
 				break;
 			default:
 				System.out.println("- 프로그램 종료 -");
