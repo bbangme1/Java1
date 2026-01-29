@@ -130,7 +130,7 @@ public class MeetingRoomDAO {
 	    try {
 	    	Class.forName(dbDrv);
 	        conn = DriverManager.getConnection(dbUrl, dbUsr, dbPwd);
-	        String sql = "SELECT capacity from room where id = ?";
+	        String sql = "selct capacity from room where id = ?";
 	        pstmt = conn.prepareStatement(sql);
 	        pstmt.setInt(1, roomId);
 	        rs = pstmt.executeQuery();
