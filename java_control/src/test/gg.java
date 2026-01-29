@@ -49,6 +49,35 @@ public class gg {
 //		}System.out.println("최대"+max);
 //		System.out.println("최소"+min);
 		
+//		int s = 10;
+//		int y = 4;
+//		int sum = s / y;
+//		int n = s % y;
+//		System.out.println(sum+" "+n);
+		
+//		int s = 10;
+//		int n = 7;
+//		int su = (n / 2)+(n%2);
+//		int m = su * s;
+//		System.out.println(su);
+//		System.out.println(m);
+		
+//		int yh = 5;
+//		int ym = 30;
+//		int th = 6;
+//		int tm = 50;
+//		
+//		int yht = yh*60+ym;
+//		int tht = th*60+tm;
+//		
+//		int tot = yht+tht;
+//		int tots = tot / 60;
+//		int totn = tot % 60;
+//		int a = tht -yht;
+//		int as = a / 60;
+//		int ass = a % 60;
+//		System.out.println(tots+" "+totn);
+//		System.out.println(as + " " + ass);
 		
 
 	}
